@@ -1,0 +1,48 @@
+@use '../../../assets/scss/variables' as *;
+// * removes need to call namespace
+@use '../../../assets/scss/mixin' as *;
+// * removes need to call namespace
+@use '../../../assets/scss/progress-bar' as *; // * removes need to call namespace
+
+// page content wrapper
+main {
+  padding-top: $spacing-vsmall;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form-wrapper {
+    margin: $spacing-small $spacing-medium $spacing-medium $spacing-medium;
+    padding: $spacing-medium $spacing-xlarge;
+    background-color: $third-color;
+    border-radius: $border-radius-large;
+    box-shadow: 2px 2px 10px $primary-color;
+    width: clamp(320px, 50%, $breakpoint1);
+  }
+
+  // JSON page code outout render
+  .code-output {
+    border-radius: $border-radius-medium;
+    background-color: $secondary-color;
+
+    // code format output
+    pre {
+      font-size: $font-size-small;
+      font-weight: $font-weight-medium;
+      padding: $spacing-medium;
+      color: $primary-color-background;
+      white-space: pre-wrap; // break words that are too long
+    }
+  }
+
+  // for validation error text
+  .error-message {
+    color: #fff;
+    padding: $spacing-medium;
+    margin-top: $spacing-xlarge;
+    margin-bottom: $spacing-xlarge;
+    border-radius: $border-radius-medium;
+    background-color: $color-alert;
+  }
+
+}
